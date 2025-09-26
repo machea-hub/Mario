@@ -11,9 +11,6 @@ export const Container = styled.div`
 
 export const LogoCentral = styled.div`
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 
     p{
         color: #fff
@@ -30,7 +27,8 @@ export const Button = styled.button`
     color: #fff;
     width: 200px;
     height: 50px;
-    /* padding: 10px 20px; */
+    margin-top: 20px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 3px;
     border: none;
