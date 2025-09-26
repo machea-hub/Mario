@@ -27,9 +27,9 @@ function Home() {
 
       <Video autoPlay loop muted >
         <Source src={Background} type="video/mp4" />
-        <Mascara></Mascara>
       </Video>
 
+      <Mascara />
       <ImgBrothers src={Brothers} alt="super-mario-brothers" />
     </Container>
   );

@@ -15,6 +15,10 @@ export const LogoCentral = styled.div`
     flex-direction: column;
     gap: 10px;
 
+    p{
+        color: #fff
+    }
+
     img{
         height: 200px;
         width: 355px;
@@ -58,9 +62,11 @@ export const Video = styled.video`
 `
 
 export const Mascara = styled.div`
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+  z-index: -1;
+`;
