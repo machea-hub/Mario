@@ -68,3 +68,11 @@ export const Mascara = styled.div`
   background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
   z-index: -1;
 `;
+
+export const WhatsappImg = styled.img`
+    height: 60px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+`

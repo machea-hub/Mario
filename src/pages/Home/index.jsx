@@ -1,7 +1,8 @@
 import Logo from "../../assets/logomario.png";
 import Brothers from "../../assets/brothers.png";
 import Background from "../../assets/video.mp4";
-import { Container, LogoCentral, ImgBrothers, Button,Source, Video, Mascara } from "./styles";
+import Whatsapp from "../../assets/whatsapp.png";
+import { Container, LogoCentral, ImgBrothers, Button,Source, Video, Mascara, WhatsappImg } from "./styles";
 
 function Home() {
   return (
@@ -25,12 +26,16 @@ function Home() {
 
       </LogoCentral>
 
+      <ImgBrothers src={Brothers} alt="super-mario-brothers" />
+
+      <a href="https://wa.link/ge9hph" alt="Link para o WhatsApp" target="_blank" rel="noreferrer">
+        <WhatsappImg src={Whatsapp} alt="WhatsApp" />
+      </a>
+
       <Video autoPlay loop muted >
         <Source src={Background} type="video/mp4" />
       </Video>
-
       <Mascara />
-      <ImgBrothers src={Brothers} alt="super-mario-brothers" />
     </Container>
   );
 }
