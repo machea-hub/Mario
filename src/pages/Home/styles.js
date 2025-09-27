@@ -4,13 +4,48 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 100px;
+    padding: 0px 100px;
     height: 100vh;
     
 `
 
+export const Header = styled.header`
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+    
+
+
+    a {
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+            color: #C51111;
+            transform: scale(1.1);
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
+    }
+`
+
+export const LogoHeader = styled.img`
+    height: 60px;
+`
+
 export const LogoCentral = styled.div`
     width: 50%;
+
+    .title{
+        font-weight: bold;
+        font-size: 20px;
+    }
 
     p{
         color: #fff
@@ -51,7 +86,6 @@ export const ImgBrothers = styled.img`
 
 export const Source = styled.source`
    width: 100vw;
-   
 `
 export const Video = styled.video`
     position: fixed;
