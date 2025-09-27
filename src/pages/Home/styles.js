@@ -83,14 +83,17 @@ export const Button = styled.button`
 export const ImgBrothers = styled.img`
     height: 500px
 `
-
-export const Source = styled.source`
-   width: 100vw;
-`
 export const Video = styled.video`
     position: fixed;
     top: 0;
     z-index: -1;    
+`
+
+export const Source = styled.source`
+   min-width: 100%;
+   min-height: 100%;
+   position: fixed;
+   top: 0;
 `
 
 export const Mascara = styled.div`
@@ -110,3 +113,55 @@ export const WhatsappImg = styled.img`
     right: 20px;
     cursor: pointer;
 `
+export const Form = styled.form`
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 10px;
+    top: 30%;
+    left: -300px;
+
+    input{
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #8e8e93ff;
+        padding-left: 5px;
+        outline-color: #c51111;
+    }
+
+    textarea {
+        min-height: 100px;
+        min-width: 270px;
+        border-radius: 5px;
+        border: 1px solid #8e8e93ff;
+        padding-left: 5px;
+        outline-color: #c51111;
+    }
+
+    button{
+        align-self: center;
+    }
+`
+
+/* export const MascaraForm = styled.div`
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, #0a0c10fc 15%, #0a0c10b3 50%, #0a0c10fc 85%);
+`
+ */
+
+/* 
+Inicial: 
+top: 30%;
+left: -300px;
+
+Final:
+top: 30%;
+left: 50%;
+transform: translateX(-50%);
+*/

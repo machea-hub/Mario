@@ -14,11 +14,15 @@ import {
   WhatsappImg,
   Header,
   LogoHeader,
+  Form,
+  // MascaraForm,
 } from "./styles";
 
 function Home() {
   return (
     <>
+      {/* <MascaraForm></MascaraForm> */}
+
       <Header>
         <LogoHeader src={Mario} alt="Logo Mario" />
         <a href="">Home</a>
@@ -30,8 +34,8 @@ function Home() {
         <LogoCentral>
           <img src={Logo} alt="super-mario-logo" />
           <p className="title">
-            Encanadores Mario e Luigi <br /> Resolvendo seus problemas Hidráulicos
-            com Estilo
+            Encanadores Mario e Luigi <br /> Resolvendo seus problemas
+            Hidráulicos com Estilo
           </p>
           <br />
           <p>
@@ -45,21 +49,27 @@ function Home() {
         </LogoCentral>
 
         <ImgBrothers src={Brothers} alt="super-mario-brothers" />
-
-        <a
-          href="https://wa.link/ge9hph"
-          alt="Link para o WhatsApp"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <WhatsappImg src={Whatsapp} alt="WhatsApp" />
-        </a>
-
-        <Video autoPlay loop muted>
-          <Source src={Background} type="video/mp4" />
-        </Video>
-        <Mascara />
       </Container>
+      <a
+        href="https://wa.link/ge9hph"
+        alt="Link para o WhatsApp"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <WhatsappImg src={Whatsapp} alt="WhatsApp" />
+      </a>
+
+      <Video autoPlay loop muted>
+        <Source src={Background} type="video/mp4" />
+      </Video>
+      <Mascara />
+
+      <Form>
+        <input type="text" placeholder="Seu nome" />
+        <input type="tel" placeholder="Seu telefone" />
+        <textarea placeholder="Digite seu problema aqui..."></textarea>
+        <Button>Pedir orçamento</Button>
+      </Form>
     </>
   );
 }
