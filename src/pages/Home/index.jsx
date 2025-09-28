@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Logo from "../../assets/logomario.png";
 import Brothers from "../../assets/brothers.png";
 import Background from "../../assets/video.mp4";
@@ -15,13 +17,19 @@ import {
   Header,
   LogoHeader,
   Form,
-  // MascaraForm,
+  MascaraForm,
 } from "./styles";
 
 function Home() {
+  const [formAberto, setFormAberto] = useState(true);
+
+  const abrirForm = () => setFormAberto(true);
+
+  const fecharForm = () => setFormAberto(false);
+
   return (
     <>
-      {/* <MascaraForm></MascaraForm> */}
+      <MascaraForm visivel={formAberto} onClick={fecharForm}></MascaraForm>
 
       <Header>
         <LogoHeader src={Mario} alt="Logo Mario" />
@@ -45,7 +53,9 @@ function Home() {
             Apresentamos a vocês os encanadores mais famosos do Reino dos
             Cogumelos - Mario e Luigi!
           </p>
-          <Button type="button">Entre em contato</Button>
+          <Button type="button" onClick={abrirForm}>
+            Entre em contato
+          </Button>
         </LogoCentral>
 
         <ImgBrothers src={Brothers} alt="super-mario-brothers" />
@@ -64,7 +74,7 @@ function Home() {
       </Video>
       <Mascara />
 
-      <Form>
+      <Form visivel={formAberto}>
         <input type="text" placeholder="Seu nome" />
         <input type="tel" placeholder="Seu telefone" />
         <textarea placeholder="Digite seu problema aqui..."></textarea>

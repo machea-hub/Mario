@@ -122,7 +122,9 @@ export const Form = styled.form`
     border-radius: 5px;
     gap: 10px;
     top: 30%;
-    left: -300px;
+    left: ${(props) => (props.visivel ? "50%" : "-300px")};
+    transform: ${(props) => (props.visivel ? "translateX(-50%)" : "none")};
+    transition: left 1s ease-in-out;
 
     input{
         height: 40px;
@@ -147,11 +149,13 @@ export const Form = styled.form`
 `
 
 export const MascaraForm = styled.div`
+    visibility: ${(props) => (props.visivel ? "visible" : "hidden")};
     position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(109deg, #0a0c10fc 15%, #0a0c10b3 50%, #0a0c10fc 85%);
+    transition: visibility 1s ease-in-out;
 `
 
 
