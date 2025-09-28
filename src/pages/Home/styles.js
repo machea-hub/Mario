@@ -146,14 +146,14 @@ export const Form = styled.form`
     }
 `
 
-/* export const MascaraForm = styled.div`
+export const MascaraForm = styled.div`
     position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(109deg, #0a0c10fc 15%, #0a0c10b3 50%, #0a0c10fc 85%);
 `
- */
+
 
 /* 
 Inicial: 
