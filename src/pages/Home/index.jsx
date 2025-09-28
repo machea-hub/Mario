@@ -74,11 +74,16 @@ function Home() {
       </Video>
       <Mascara />
 
-      <Form visivel={formAberto}>
-        <input type="text" placeholder="Seu nome" />
-        <input type="tel" placeholder="Seu telefone" />
-        <textarea placeholder="Digite seu problema aqui..."></textarea>
-        <Button>Pedir orçamento</Button>
+      <Form
+        visivel={formAberto}
+        action="https://formcarry.com/s/3WF8i-hCCtr"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <input type="text" placeholder="Seu nome" name="nome" />
+        <input type="tel" placeholder="Seu telefone" name="telefone"/>
+        <textarea placeholder="Digite seu problema aqui..." name="duvida"></textarea>
+        <Button type="submit">Pedir orçamento</Button>
       </Form>
     </>
   );
