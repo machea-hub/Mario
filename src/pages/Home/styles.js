@@ -1,4 +1,5 @@
 import {styled} from 'styled-components'
+import breakpoints from '../../styles/breakpoints'
 
 export const Container = styled.div`
     display: flex;
@@ -6,6 +7,12 @@ export const Container = styled.div`
     justify-content: space-around;
     padding: 0px 100px;
     height: 100vh;
+
+        @media ${breakpoints.md} {
+            flex-direction: column;
+            padding: 0px 10px;
+
+        }
     
 `
 
@@ -33,6 +40,21 @@ export const Header = styled.header`
             opacity: 0.6;
         }
     }
+
+        @media ${breakpoints.md} {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a{
+                font-size: 18px;
+            }
+
+            img{
+                display: none;
+            }
+        }
 `
 
 export const LogoHeader = styled.img`
@@ -54,6 +76,17 @@ export const LogoCentral = styled.div`
     img{
         height: 200px;
         width: 355px;
+    }
+
+    @media ${breakpoints.md} {
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        p{
+            display: none;
+        }
     }
 
 `
@@ -81,17 +114,26 @@ export const Button = styled.button`
 `
 
 export const ImgBrothers = styled.img`
-    height: 500px
+    height: 500px;
+
+    @media ${breakpoints.md} {
+        width: 80vw;
+        height: auto;
+    }
 `
 export const Video = styled.video`
     position: fixed;
     top: 0;
-    z-index: -1;    
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;   
 `
 
 export const Source = styled.source`
-   min-width: 100%;
-   min-height: 100%;
+   width: 100%;
+   height: 100%;
    position: fixed;
    top: 0;
 `

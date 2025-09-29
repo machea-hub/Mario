@@ -21,7 +21,7 @@ import {
 } from "./styles";
 
 function Home() {
-  const [formAberto, setFormAberto] = useState(true);
+  const [formAberto, setFormAberto] = useState(false);
 
   const abrirForm = () => setFormAberto(true);
 
